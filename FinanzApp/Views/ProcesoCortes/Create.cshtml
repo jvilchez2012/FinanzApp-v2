@@ -1,0 +1,63 @@
+﻿@model FinanzApp.Models.ProcesoCorte
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>ProcesoCorte</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Year" class="control-label"></label>
+                <input asp-for="Year" class="form-control" />
+                <span asp-validation-for="Year" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Mes" class="control-label"></label>
+                <input asp-for="Mes" class="form-control" />
+                <span asp-validation-for="Mes" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="FechaCorte" class="control-label"></label>
+                <input asp-for="FechaCorte" class="form-control" />
+                <span asp-validation-for="FechaCorte" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="BalanceInicial" class="control-label"></label>
+                <input asp-for="BalanceInicial" class="form-control" />
+                <span asp-validation-for="BalanceInicial" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TotalIngresos" class="control-label"></label>
+                <input asp-for="TotalIngresos" class="form-control" />
+                <span asp-validation-for="TotalIngresos" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TotalEgresos" class="control-label"></label>
+                <input asp-for="TotalEgresos" class="form-control" />
+                <span asp-validation-for="TotalEgresos" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="BalanceCorte" class="control-label"></label>
+                <input asp-for="BalanceCorte" class="form-control" />
+                <span asp-validation-for="BalanceCorte" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
