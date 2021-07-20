@@ -1,4 +1,5 @@
 ﻿using FinanzApp.Models;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using MySql.Data.MySqlClient;
@@ -21,8 +22,16 @@ namespace FinanzApp.Controllers
 
         public IActionResult Index()
         {
-
+            string sessionName = HttpContext.Session.GetString("nombre");
+            if (sessionName != null)
+            {
                 return View();
+            }
+            else
+            {
+                return Redirect("Login/Index");
+            }
+            
         }
 
         public IActionResult Privacy()

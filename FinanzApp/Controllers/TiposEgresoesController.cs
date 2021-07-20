@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using FinanzApp.Models;
+using Microsoft.AspNetCore.Http;
 
 namespace FinanzApp.Controllers
 {
@@ -21,7 +22,16 @@ namespace FinanzApp.Controllers
         // GET: TiposEgresoes
         public async Task<IActionResult> Index()
         {
-            return View(await _context.TiposEgresos.ToListAsync());
+            string sessionName = HttpContext.Session.GetString("nombre");
+            if (sessionName != null)
+            {
+                return View(await _context.TiposEgresos.ToListAsync());
+            }
+            else
+            {
+                return Redirect("Login/Index");
+            }
+            
         }
 
         // GET: TiposEgresoes/Details/5

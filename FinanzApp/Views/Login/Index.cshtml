@@ -1,0 +1,35 @@
+﻿
+@{
+    ViewData["Title"] = "Bienvenido";
+}
+
+@model Usuario
+
+
+    <div class="row">
+        <div class="col-md-12" id="alertaMensaje" hidden>
+            <div class="alert alert-info alert-dismissible" id="myAlert"></div>
+        </div>
+        <div class="col-md-12">
+            <form asp-controller="Login" asp-action="Index" method="post" id="login">
+                <h4>Iniciar Sessión</h4>
+                <hr />
+                <div class="mb-3">
+                    <label asp-for="Nombre" class="form-label">Nombre usuario:</label>
+                    <input asp-for="Nombre" class="form-control">
+                    <span asp-validation-for="Nombre" class="text-danger"></span>
+                </div>
+                <div class="mb-3">
+                    <label asp-for="Identificacion" class="form-label">Contraseña</label>
+                    <input asp-for="Identificacion" type="password" class="form-control">
+                    <span asp-validation-for="Identificacion" class="text-danger"></span>
+                </div>
+                <button type="submit" class="btn btn-primary">Entrar</button>
+            </form>
+        </div>
+    </div>
+
+
+@section scripts {
+    <script src="~/js/login.js"></script>
+}

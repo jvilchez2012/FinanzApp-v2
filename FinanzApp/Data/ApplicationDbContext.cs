@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
+using FinanzApp.Models;
 using System;
 using System.Collections.Generic;
 using System.Text;
