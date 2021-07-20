@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.AspNetCore.Mvc;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 
@@ -12,6 +13,7 @@ namespace FinanzApp.Models
         {
             RegistroTransacciones = new HashSet<RegistroTransaccione>();
         }
+        
 
         public int Id { get; set; }
         [Required(ErrorMessage ="Escribe tu nombre")]

@@ -18,45 +18,45 @@
                         aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
-                    <partial name="_LoginPartial" />
-                    <ul class="navbar-nav flex-grow-1">
-                        <li class="nav-item">
-                            <a class="nav-link text-dark bi bi-wallet" asp-area="" asp-controller="TiposPagos" asp-action="Index"> Tipos de Pagos</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark bi bi-people-fill" asp-area="" asp-controller="Usuarios" asp-action="Index"> Usuarios</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark bi bi-bank" asp-area="" asp-controller="RegistroTransacciones" asp-action="Index"> Transacciones</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark bi bi-receipt-cutoff" asp-area="" asp-controller="ProcesoCortes" asp-action="Index"> Cortes</a>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle bi bi-piggy-bank" href="#" id="navbardrop" data-toggle="dropdown">
-                                 Ingresos
-                            </a>
-                            <div class="dropdown-menu">
-                                <a class="nav-link text-dark" asp-area="" asp-controller="TiposIngresos" asp-action="Index">Tipos de Ingresos</a>
-                                <a class="nav-link text-dark" asp-area="" asp-controller="GestionIngresos" asp-action="Index">Gestión de Ingresos</a>
-                            </div>
-                        </li>
-                        <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle bi bi-handbag" href="#" id="navbardrop" data-toggle="dropdown">
-                            Egresos
-                        </a>
-                        <div class="dropdown-menu">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="TiposEgresoes" asp-action="Index">Tipos de Egresos</a>
-                            <a class="nav-link text-dark" asp-area="" asp-controller="RenglonesEgresos" asp-action="Index">Renglones de Egresos</a>
-                            <a class="nav-link text-dark" asp-area="" asp-controller="GestionEgresos" asp-action="Index">Gestión de Egresos</a>
-                        </div>
-                        </li>
+                    <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
+                        <ul class="navbar-nav flex-grow-1">
+                            <li class="nav-item">
+                                <a class="nav-link text-dark bi bi-wallet" asp-area="" asp-controller="TiposPagos" asp-action="Index"> Tipos de Pagos</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-dark bi bi-people-fill" asp-area="" asp-controller="Usuarios" asp-action="Index"> Usuarios</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-dark bi bi-bank" asp-area="" asp-controller="RegistroTransacciones" asp-action="Index"> Transacciones</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-dark bi bi-receipt-cutoff" asp-area="" asp-controller="ProcesoCortes" asp-action="Index"> Cortes</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle bi bi-piggy-bank" href="#" id="navbardrop" data-toggle="dropdown">
+                                    Ingresos
+                                </a>
+                                <div class="dropdown-menu">
+                                    <a class="nav-link text-dark" asp-area="" asp-controller="TiposIngresos" asp-action="Index">Tipos de Ingresos</a>
+                                    <a class="nav-link text-dark" asp-area="" asp-controller="GestionIngresos" asp-action="Index">Gestión de Ingresos</a>
+                                </div>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle bi bi-handbag" href="#" id="navbardrop" data-toggle="dropdown">
+                                    Egresos
+                                </a>
+                                <div class="dropdown-menu">
+                                    <a class="nav-link text-dark" asp-area="" asp-controller="TiposEgresoes" asp-action="Index">Tipos de Egresos</a>
+                                    <a class="nav-link text-dark" asp-area="" asp-controller="RenglonesEgresos" asp-action="Index">Renglones de Egresos</a>
+                                    <a class="nav-link text-dark" asp-area="" asp-controller="GestionEgresos" asp-action="Index">Gestión de Egresos</a>
+                                </div>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-dark bi bi-person-lines-fill" asp-area="" asp-controller="Login" asp-action="Registrarse"> Registrarse</a>
+                            </li>
+                        </ul>
+                    </div>
 
-
-                    </ul>
-
-                </div>
             </div>       
                
            
