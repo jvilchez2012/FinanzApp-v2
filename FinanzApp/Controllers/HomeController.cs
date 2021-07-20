@@ -1,6 +1,7 @@
 ﻿using FinanzApp.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
+using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -20,7 +21,8 @@ namespace FinanzApp.Controllers
 
         public IActionResult Index()
         {
-            return View();
+
+                return View();
         }
 
         public IActionResult Privacy()

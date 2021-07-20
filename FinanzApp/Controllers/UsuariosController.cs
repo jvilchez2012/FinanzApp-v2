@@ -55,6 +55,9 @@ namespace FinanzApp.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("Id,Nombre,Identificacion,LimiteEgresos,TipoPersona,FechaCorte,Estado")] Usuario usuario)
         {
+
+            if (!validaCedula(usuario.Identificacion))
+                ModelState.AddModelError("Identificacion", "La identificacion digitada es incorrecta");
             if (ModelState.IsValid)
             {
                 _context.Add(usuario);
@@ -148,5 +151,31 @@ namespace FinanzApp.Controllers
         {
             return _context.Usuarios.Any(e => e.Id == id);
         }
+
+        public static bool validaCedula(string pCedula)
+        {
+            int vnTotal = 0;
+            string vcCedula = pCedula.Replace("-", "");
+            int pLongCed = vcCedula.Trim().Length;
+            int[] digitoMult = new int[11] { 1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1 };
+
+            if (pLongCed < 11 || pLongCed > 11)
+                return false;
+
+            for (int vDig = 1; vDig <= pLongCed; vDig++)
+            {
+                int vCalculo = Int32.Parse(vcCedula.Substring(vDig - 1, 1)) * digitoMult[vDig - 1];
+                if (vCalculo < 10)
+                    vnTotal += vCalculo;
+                else
+                    vnTotal += Int32.Parse(vCalculo.ToString().Substring(0, 1)) + Int32.Parse(vCalculo.ToString().Substring(1, 1));
+            }
+
+            if (vnTotal % 10 == 0)
+                return true;
+            else
+                return false;
+        }
+
     }
 }
