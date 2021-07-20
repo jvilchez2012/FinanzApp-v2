@@ -30,8 +30,11 @@
             </div>
             <div class="form-group">
                 <label asp-for="TipoPersona" class="control-label"></label>
-                <input asp-for="TipoPersona" class="form-control" />
-                <span asp-validation-for="TipoPersona" class="text-danger"></span>
+                <select asp-for="TipoPersona" class="form-control">
+                    <option disabled>Elije el tipo de persona</option>
+                    <option value="Fisico">Fisico</option>
+                    <option value="Juridico">Juridico</option>
+                </select>
             </div>
             <div class="form-group">
                 <label asp-for="FechaCorte" class="control-label"></label>
