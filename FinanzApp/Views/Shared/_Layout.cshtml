@@ -6,12 +6,14 @@
     <title>@ViewData["Title"] - FinanzApp</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+    <link rel="icon" href="/images/FinanzAppsLogo.ico">
 </head>
 <body>
     <header>
         <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
             <div class="container">
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">FinanzApp</a>
+                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index"><img src="/images/FinanzAppsLogopng.png" alt="logo" width="50" height="45">FinanzApp</a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -20,14 +22,44 @@
                     <partial name="_LoginPartial" />
                     <ul class="navbar-nav flex-grow-1">
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                            <a class="nav-link text-dark bi bi-wallet" asp-area="" asp-controller="TiposPagos" asp-action="Index"> Tipos de Pagos</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+                            <a class="nav-link text-dark bi bi-people-fill" asp-area="" asp-controller="Usuarios" asp-action="Index"> Usuarios</a>
                         </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark bi bi-bank" asp-area="" asp-controller="RegistroTransacciones" asp-action="Index"> Transacciones</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark bi bi-receipt-cutoff" asp-area="" asp-controller="ProcesoCortes" asp-action="Index"> Cortes</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle bi bi-piggy-bank" href="#" id="navbardrop" data-toggle="dropdown">
+                                 Ingresos
+                            </a>
+                            <div class="dropdown-menu">
+                                <a class="nav-link text-dark" asp-area="" asp-controller="TiposIngresos" asp-action="Index">Tipos de Ingresos</a>
+                                <a class="nav-link text-dark" asp-area="" asp-controller="GestionIngresos" asp-action="Index">Gestión de Ingresos</a>
+                            </div>
+                        </li>
+                        <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle bi bi-handbag" href="#" id="navbardrop" data-toggle="dropdown">
+                            Egresos
+                        </a>
+                        <div class="dropdown-menu">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="TiposEgresoes" asp-action="Index">Tipos de Egresos</a>
+                            <a class="nav-link text-dark" asp-area="" asp-controller="RenglonesEgresos" asp-action="Index">Renglones de Egresos</a>
+                            <a class="nav-link text-dark" asp-area="" asp-controller="GestionEgresos" asp-action="Index">Gestión de Egresos</a>
+                        </div>
+                        </li>
+
+
                     </ul>
+
                 </div>
-            </div>
+            </div>       
+               
+           
         </nav>
     </header>
     <div class="container">
@@ -38,7 +70,7 @@
 
     <footer class="border-top footer text-muted">
         <div class="container">
-            &copy; 2021 - FinanzApp - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+            &copy; 2021 - FinanzApp - Jonathan, Kenny y Danna
         </div>
     </footer>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
