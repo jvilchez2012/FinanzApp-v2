@@ -21,6 +21,7 @@ namespace FinanzApp.Controllers
         // GET: Usuarios
         public async Task<IActionResult> Index()
         {
+            //hola mundo
             return View(await _context.Usuarios.ToListAsync());
         }
 
