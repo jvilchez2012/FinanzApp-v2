@@ -28,10 +28,8 @@ namespace FinanzApp.Models
         [Display(Name = "Monto de la trasaccion")]
         public decimal MontoTransaccion { get; set; }
         [Display(Name = "Numero de tarjeta de credito")]
-        [CreditCard(ErrorMessage ="Tarjeta Invalida")]
         public int? NoTdc { get; set; }
         [Required(ErrorMessage = "Debes ingresar un comentario")]
-        [Range(0, 250, ErrorMessage ="Debes ingresar valores entre 0 y 250 caracteres")]
         public string Comentario { get; set; }
         [Required(ErrorMessage = "Debes seleccionar el estado (ACTIVO O INACTIVO)")]
         public bool Estado { get; set; }

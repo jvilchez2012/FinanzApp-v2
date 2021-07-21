@@ -13,7 +13,6 @@ namespace FinanzApp.Models
         [Display(Name = "Tipo de ingreso")]
         public int IdTipoIngreso { get; set; }
         [Required(ErrorMessage = "Debes ingresar la descripcion")]
-        [Range(0, 50, ErrorMessage = "Debes ingresar valores entre 0 y 250 caracteres")]
         public string Descripcion { get; set; }
         [Required(ErrorMessage ="Ingresa la fuente del ingreso")]
         public string Fuente { get; set; }

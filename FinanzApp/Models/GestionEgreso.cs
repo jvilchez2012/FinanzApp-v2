@@ -16,7 +16,6 @@ namespace FinanzApp.Models
         [Required(ErrorMessage = "Elije un tipo de pago")]
         public int IdTipoPago { get; set; }
         [Required(ErrorMessage = "Escribe la descripcion del egreso")]
-        [Range(0, 250, ErrorMessage ="Debes ingresar valores entre 0 y 250 caracteres")]
         public string Descripcion { get; set; }
         [Required(ErrorMessage = "Debes seleccionar el estado (ACTIVO O INACTIVO)")]
         public bool Estado { get; set; }
