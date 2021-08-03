@@ -27,7 +27,9 @@ namespace FinanzApp.Models
         [Required(ErrorMessage = "Digita el monto de la transaccion")]
         [Display(Name = "Monto de la trasaccion")]
         public decimal MontoTransaccion { get; set; }
-        [Display(Name = "Numero de tarjeta de credito")]
+        [Display(Name = "Terminal de tarjeta de credito"), ]
+        [Range(0001, 9999,
+        ErrorMessage = "Solo los ultimos digitos")]
         public int? NoTdc { get; set; }
         [Required(ErrorMessage = "Debes ingresar un comentario")]
         public string Comentario { get; set; }

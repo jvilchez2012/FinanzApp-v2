@@ -20,12 +20,15 @@ namespace FinanzApp.Controllers
         }
 
         // GET: Usuarios
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index(String Criterio = null)
         {
             string sessionName = HttpContext.Session.GetString("nombre");
             if (sessionName != null)
             {
-                return View(await _context.Usuarios.ToListAsync());
+                return View(await _context.Usuarios.Where(p => Criterio == null ||
+                                                         p.Nombre.StartsWith(Criterio) ||
+                                                         p.TipoPersona.StartsWith(Criterio) ||
+                                             p.Identificacion.StartsWith(Criterio)).ToListAsync());
             }
             else
             {

@@ -25,17 +25,19 @@ namespace FinanzApp.Models
         [Required(ErrorMessage = "Escribe el balance inicial")]
         [Display(Name = "Balance inicial")]
         public decimal BalanceInicial { get; set; }
-
+        [Range(1, 999999999999999, ErrorMessage = "Revise el monto")]
         [Required(ErrorMessage = "Escribe el total de los ingresos")]
         [Display(Name = "Total de ingresos")]
         public decimal TotalIngresos { get; set; }
 
         [Required(ErrorMessage = "Escribe el total de egresos")]
         [Display(Name = "Total de egresos")]
+        [Range(1, 999999999999999, ErrorMessage = "Revise el monto")]
 
         public decimal TotalEgresos { get; set; }
-        [Required(ErrorMessage = "Ingresa el balance al corte")]
+        
         [Display(Name = "Balance al corte")]
+        
 
         public decimal BalanceCorte { get; set; }
     }

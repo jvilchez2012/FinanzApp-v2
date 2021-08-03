@@ -12,8 +12,11 @@
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">
                 <label asp-for="TipoTransaccion" class="control-label"></label>
-                <input asp-for="TipoTransaccion" class="form-control" />
-                <span asp-validation-for="TipoTransaccion" class="text-danger"></span>
+                <select asp-for="TipoTransaccion" class="form-control">
+                    <option disabled>Elije el tipo de transaccion</option>
+                    <option value="Fiao">Fiao</option>
+                    <option value="Al Cacarazo">Al Cacarazo</option>
+                </select>
             </div>
             <div class="form-group">
                 <label asp-for="IdUsuario" class="control-label"></label>

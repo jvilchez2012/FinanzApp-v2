@@ -25,6 +25,8 @@ namespace FinanzApp.Models
         [RegularExpression("^[0-9]{3}-[0-9]{7}-[0-9]{1}$")]
         public string Identificacion { get; set; }
         [Display(Name = "Limite de egresos")]
+        [Required(ErrorMessage = "Revise el monto")]
+        [Range(1, 999999999999999, ErrorMessage = "Revise el monto")]
         public decimal LimiteEgresos { get; set; }
         [Display(Name = "Tipo de persona")]
         public string TipoPersona { get; set; }
