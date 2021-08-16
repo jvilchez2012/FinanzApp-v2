@@ -36,6 +36,9 @@ namespace FinanzApp.Models
         [Required(ErrorMessage = "Debes seleccionar el estado (ACTIVO O INACTIVO)")]
         public bool Estado { get; set; }
 
+        public DateTime FechaInicio { get; set; }
+        public DateTime FechaFin { get; set; }
+
         public virtual TiposPago IdTipoPagoNavigation { get; set; }
         public virtual Usuario IdUsuarioNavigation { get; set; }
     }

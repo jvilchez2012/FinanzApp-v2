@@ -1,0 +1,30 @@
+﻿@model FinanzApp.Models.RegistroTransaccione
+
+@{
+    ViewData["Title"] = "Reporte";
+}
+
+<h1>Reporte al corte</h1>
+
+<form asp-action="Buscar">
+    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+    <div class="row">
+        <div class="col-md-3">
+            <label for="exampleInputEmail1" class="form-label">Fecha de inicio</label>
+            <input type="date" asp-for="FechaInicio" class="form-control" />
+        </div>
+        <div class="col-md-3">
+            <label for="exampleInputEmail1" class="form-label">Fecha de fin</label>
+            <input type="date" asp-for="FechaFin" class="form-control" />
+        </div>
+        <div class="col-md-3">
+            <label for="exampleInputPassword1" class="form-label">Usuario</label>
+            <select asp-for="IdUsuario" class="form-select" asp-items="ViewBag.Usuarios">
+                <option>Seleccione ...</option>
+            </select>
+        </div>
+        <div class="col-md-3">
+            <button type="submit" class="btn btn-primary">Generar</button>
+        </div>
+    </div>
+</form>
