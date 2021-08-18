@@ -26,6 +26,7 @@ namespace FinanzApp.Controllers
             if (sessionName != null)
             {
                 var finanzappsdbContext = _context.RegistroTransacciones.Include(r => r.IdTipoPagoNavigation).Include(r => r.IdUsuarioNavigation);
+
                 return View(await _context.RegistroTransacciones.Where(p => Criterio == null ||
                                                          p.TipoTransaccion.StartsWith(Criterio) ||
                                                          p.Comentario.StartsWith(Criterio) ||
