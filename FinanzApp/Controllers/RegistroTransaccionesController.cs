@@ -78,6 +78,7 @@ namespace FinanzApp.Controllers
             {
                 _context.Add(registroTransaccione);
                 await _context.SaveChangesAsync();
+                //_context.Update();
                 return RedirectToAction(nameof(Index));
             }
             ViewData["IdTipoPago"] = new SelectList(_context.TiposPagos, "Id", "Descripcion", registroTransaccione.IdTipoPago);

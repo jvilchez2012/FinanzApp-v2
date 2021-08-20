@@ -4,10 +4,11 @@
     ViewData["Title"] = "Index";
 }
 
+<h1>Index</h1>
+
 <p>
-    <a asp-action="Create">Crear nuevo</a>
+    <a asp-action="Create">Create New</a>
 </p>
-<form method="get"> <input type="text" id="Criterio" name="Criterio" /> <input type="submit" id="cmdBuscar" value="Buscar" /> </form>
 <table class="table">
     <thead>
         <tr>
@@ -25,6 +26,9 @@
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.FechaCorte)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.balance)
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.Estado)
@@ -51,12 +55,15 @@
                 @Html.DisplayFor(modelItem => item.FechaCorte)
             </td>
             <td>
+                @Html.DisplayFor(modelItem => item.balance)
+            </td>
+            <td>
                 @Html.DisplayFor(modelItem => item.Estado)
             </td>
             <td>
-                <a asp-action="Edit" asp-route-id="@item.Id">Editar</a> |
-                <a asp-action="Details" asp-route-id="@item.Id">Detalle</a> |
-                <a asp-action="Delete" asp-route-id="@item.Id">Borrar</a>
+                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
             </td>
         </tr>
 }

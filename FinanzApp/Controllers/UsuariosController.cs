@@ -34,7 +34,7 @@ namespace FinanzApp.Controllers
             {
                 return Redirect("Login/Index");
             }
-           
+
         }
 
         // GET: Usuarios/Details/5
@@ -66,7 +66,7 @@ namespace FinanzApp.Controllers
         // more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,Nombre,Identificacion,LimiteEgresos,TipoPersona,FechaCorte,Estado")] Usuario usuario)
+        public async Task<IActionResult> Create([Bind("Id,Nombre,Identificacion,LimiteEgresos,TipoPersona,FechaCorte,balance,Estado")] Usuario usuario)
         {
 
             if (!validaCedula(usuario.Identificacion))
@@ -101,7 +101,7 @@ namespace FinanzApp.Controllers
         // more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,Nombre,Identificacion,LimiteEgresos,TipoPersona,FechaCorte,Estado")] Usuario usuario)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,Nombre,Identificacion,LimiteEgresos,TipoPersona,FechaCorte,balance,Estado")] Usuario usuario)
         {
             if (id != usuario.Id)
             {

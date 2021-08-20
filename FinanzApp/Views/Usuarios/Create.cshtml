@@ -40,6 +40,11 @@
                 <input asp-for="FechaCorte" class="form-control" />
                 <span asp-validation-for="FechaCorte" class="text-danger"></span>
             </div>
+            <div class="form-group">
+                <label asp-for="balance" class="control-label"></label>
+                <input asp-for="balance" class="form-control" />
+                <span asp-validation-for="balance" class="text-danger"></span>
+            </div>
             <div class="form-group form-check">
                 <label class="form-check-label">
                     <input class="form-check-input" asp-for="Estado" /> @Html.DisplayNameFor(model => model.Estado)

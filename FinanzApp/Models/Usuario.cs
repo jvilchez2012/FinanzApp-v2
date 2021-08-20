@@ -13,12 +13,12 @@ namespace FinanzApp.Models
         {
             RegistroTransacciones = new HashSet<RegistroTransaccione>();
         }
-        
+
 
         public int Id { get; set; }
-        [Required(ErrorMessage ="Escribe tu nombre")]
-        [MinLength(1, ErrorMessage ="Escribe al menos 1 caracter")]
-        [MaxLength(60, ErrorMessage ="Escribe un maximo de 60 caracteres")]
+        [Required(ErrorMessage = "Escribe tu nombre")]
+        [MinLength(1, ErrorMessage = "Escribe al menos 1 caracter")]
+        [MaxLength(60, ErrorMessage = "Escribe un maximo de 60 caracteres")]
         public string Nombre { get; set; }
 
         [Required(ErrorMessage = "Escribe tu identificacion")]
@@ -30,8 +30,10 @@ namespace FinanzApp.Models
         public decimal LimiteEgresos { get; set; }
         [Display(Name = "Tipo de persona")]
         public string TipoPersona { get; set; }
-        [Display(Name ="Fecha de corte")]
+        [Display(Name = "Fecha de corte")]
         public DateTime FechaCorte { get; set; }
+        [Range(1, 999999999999999, ErrorMessage = "Revise el monto")]
+        public decimal balance { get; set; }
         [Required(ErrorMessage = "Debes seleccionar el estado (ACTIVO O INACTIVO)")]
         public bool Estado { get; set; }
 

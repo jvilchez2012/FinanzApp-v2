@@ -32,7 +32,7 @@ namespace FinanzApp.Models
             if (!optionsBuilder.IsConfigured)
             {
                 //warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see http://go.microsoft.com/fwlink/?LinkId=723263.
-                optionsBuilder.UseMySql("server=localhost;port=3306;user=root;password=root123456;database=financialproject;Convert Zero Datetime=True", Microsoft.EntityFrameworkCore.ServerVersion.Parse("8.0.25-mysql"));
+                optionsBuilder.UseMySql("server=10.0.0.72;port=3306;user=jvilchez;password=MySQL-server-2021;database=finanzappsdb;Convert Zero Datetime=True", Microsoft.EntityFrameworkCore.ServerVersion.Parse("8.0.25-mysql"));
             }
         }
 
